@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+<body>
+    <h1>Digite em qual país voce reside</h1>
+    <input type="text"  placeholder="Em qual país voce reside?" name="txpais" id="txpais">
+    <input type="button" value="Verificar" onclick="verificar()">
+    <div id="res">
+
+    </div>
+    <script>
+            function verificar(){
+            var res = document.querySelector('div#res')
+            var pais = document.querySelector('input#txpais')
+            var ct = String(pais.value).toUpperCase()
+
+            res.innerHTML = `Morando em ${pais.value} voce é:`
+            if(ct == 'BRASIL'){
+                res.innerHTML += ' Brasileiro'
+            }else{
+                res.innerHTML += ' Estrangeiro' 
+            }
+            }
+    </script>
+</body>
+</html>
