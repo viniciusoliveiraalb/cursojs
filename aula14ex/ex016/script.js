@@ -11,6 +11,10 @@ function contar(){
         let i = Number(ini.value)
         let f = Number(fim.value)
         let p = Number(passo.value)
+        if(p <= 0){
+            window.alert('Passo invalido, considerando PASSO 1')
+            p = 1
+        }
         if(i < f){
             // CONTAGEM CRESCENTE
             for(let c = i;c <= f;c += p){
