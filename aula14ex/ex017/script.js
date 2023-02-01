@@ -1,6 +1,19 @@
-var n = 5
-var prod = 1
-while(prod <= 10){
-    console.log(`${n} X ${prod} : `+ (prod*n))
-     prod++
+function tabuada(){
+    let num = document.getElementById('txtn')
+    let tab = document.getElementById('seltab')
+
+    if(num.value.length == 0){
+        window.alert('Digite um numero!')
+    }else{
+        let n = Number(num.value)
+        let c = 1
+        tab.innerHTML = ''
+        while( c <= 10){
+            let item = document.createElement('option')
+            item.text = `${n} x ${c}  = ${n*c}`
+            item.value = `tab${c}`
+            tab.appendChild(item)
+            c++
+        }
+    }
 }
